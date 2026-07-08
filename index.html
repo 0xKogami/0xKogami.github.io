@@ -1,77 +1,74 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0xKogami | Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
         body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .card {
-            background-color: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 12px;
-            padding: 40px;
-            max-width: 450px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-        }
-        .avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 3px solid #58a6ff;
-            margin-bottom: 20px;
-        }
-        h1 {
-            color: #f0f6fc;
-            font-size: 24px;
-            margin-bottom: 8px;
-        }
-        p {
-            color: #8b949e;
-            font-size: 14px;
-            margin-bottom: 24px;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #238636;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 14px;
-            transition: background 0.2s;
-            width: 100%;
-        }
-        .btn:hover {
-            background-color: #2ea44f;
+            background-color: #0f172a;
+            color: #f8fafc;
         }
     </style>
 </head>
-<body>
+<body class="font-sans min-h-screen flex flex-col justify-between selection:bg-purple-500 selection:text-white">
 
-    <div class="card">
-        <img class="avatar" src="https://github.com" alt="0xKogami Avatar">
-        <h1>0xKogami</h1>
-        <p>Selamat datang di website resmi saya. Ini adalah halaman statis yang di-hosting menggunakan GitHub Pages.</p>
-        <a href="https://github.com" class="btn" target="_blank">Kunjungi GitHub Saya</a>
-    </div>
+    <header class="p-6 max-w-5xl w-full mx-auto flex justify-between items-center">
+        <div class="text-xl font-bold tracking-wider text-purple-400">
+            0x<span class="text-white">Kogami</span>
+        </div>
+        <nav class="space-x-6 text-sm font-medium text-slate-400">
+            <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
+            <a href="#projects" class="hover:text-purple-400 transition-colors">Projects</a>
+            <a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a>
+        </nav>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 py-12 flex-grow flex flex-col justify-center text-center md:text-left">
+        <section id="about" class="space-y-6">
+            <div class="inline-block px-3 py-1 text-xs font-semibold text-purple-300 bg-purple-900/40 rounded-full border border-purple-500/30">
+                Welcome to my digital space
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r lg:bg-gradient-to-r from-white via-slate-200 to-purple-400 bg-clip-text text-transparent">
+                Hi, I'm Kogami.
+            </h1>
+            <p class="text-base md:text-lg text-slate-400 max-w-xl leading-relaxed">
+                A passionate developer exploring the realms of web technology, security, and open-source software. Welcome to my GitHub Pages site!
+            </p>
+            
+            <div class="flex justify-center md:justify-start gap-4 pt-4">
+                <a href="https://github.com/0xKogami" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-800 hover:bg-purple-600 transition-colors text-xl" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-800 hover:bg-purple-600 transition-colors text-xl" title="Twitter/X">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-800 hover:bg-purple-600 transition-colors text-xl" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </section>
+
+        <section id="projects" class="mt-16 pt-12 border-t border-slate-800">
+            <h2 class="text-xl font-bold text-slate-200 mb-4">Latest Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-5 rounded-xl bg-slate-800/40 border border-slate-700/50 hover:border-purple-500/50 transition-all group">
+                    <h3 class="font-semibold text-purple-400 group-hover:text-purple-300">0xKogami.github.io</h3>
+                    <p class="text-xs text-slate-400 mt-1">My personal portfolio and landing page built with Tailwind CSS.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-slate-800/40 border border-slate-700/50 hover:border-purple-500/50 transition-all group">
+                    <h3 class="font-semibold text-slate-200 group-hover:text-purple-300">Awesome Project</h3>
+                    <p class="text-xs text-slate-400 mt-1">Coming soon! Staying under wraps until it's ready.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="p-6 text-center text-xs text-slate-500 border-t border-slate-900">
+        <p>&copy; 2026 0xKogami. Built with <i class="fa-solid fa-heart text-purple-500 mx-1"></i> on GitHub Pages.</p>
+    </footer>
 
 </body>
 </html>
